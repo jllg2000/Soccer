@@ -20,5 +20,15 @@ namespace Soccer.Web.Data
 
         public DbSet<TournamentEntity> Tournaments { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<TeamEntity>()
+    .HasIndex(t => t.Name)
+    .IsUnique();
+
+
+        }
+
     }
 }
