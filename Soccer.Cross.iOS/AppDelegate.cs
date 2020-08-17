@@ -16,6 +16,7 @@ namespace Soccer.Cross.iOS
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             return true;
         }
 
